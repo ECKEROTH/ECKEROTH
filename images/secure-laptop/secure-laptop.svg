@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <!-- Baggrund og gulv -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4f9fb8"/>
+      <stop offset="0.75" stop-color="#7cc0d3"/>
+      <stop offset="1" stop-color="#8fcde0"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#86c6d8"/>
+      <stop offset="1" stop-color="#a6dbe9"/>
+    </linearGradient>
+    <!-- Laptop -->
+    <linearGradient id="lid" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e9eef1"/>
+      <stop offset="1" stop-color="#b9c4cb"/>
+    </linearGradient>
+    <linearGradient id="display" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#bfe6f2"/>
+      <stop offset="0.6" stop-color="#78c1d8"/>
+      <stop offset="1" stop-color="#5aaac4"/>
+    </linearGradient>
+    <linearGradient id="base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3f6f8"/>
+      <stop offset="1" stop-color="#cdd6dc"/>
+    </linearGradient>
+    <!-- Hængelås -->
+    <linearGradient id="lockBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffa35c"/>
+      <stop offset="0.55" stop-color="#f47a2a"/>
+      <stop offset="1" stop-color="#d9581a"/>
+    </linearGradient>
+    <linearGradient id="lockSide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c24c14"/>
+      <stop offset="1" stop-color="#a83f10"/>
+    </linearGradient>
+    <linearGradient id="shackle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.5" stop-color="#e3e9ed"/>
+      <stop offset="1" stop-color="#aab6be"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Skyer -->
+    <radialGradient id="puff" cx="0.38" cy="0.32" r="0.75">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.6" stop-color="#f4f7f9"/>
+      <stop offset="1" stop-color="#cbd8df"/>
+    </radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="drop" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="6" dy="12" stdDeviation="10" flood-color="#2d6d82" flood-opacity="0.35"/>
+    </filter>
+    <clipPath id="screenClip">
+      <polygon points="292,206 590,282 590,628 292,620"/>
+    </clipPath>
+  </defs>
+
+  <!-- Baggrund -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect y="600" width="1200" height="200" fill="url(#floor)"/>
+  <rect y="596" width="1200" height="14" fill="#9fd6e5" opacity="0.6" filter="url(#soft)"/>
+
+  <!-- Skygge under laptop -->
+  <ellipse cx="620" cy="690" rx="420" ry="22" fill="#3f8aa2" opacity="0.35" filter="url(#soft)"/>
+
+  <!-- Låg / skærm -->
+  <polygon points="270,180 612,262 612,652 270,642" fill="url(#lid)"/>
+  <polygon points="262,184 270,180 270,642 262,640" fill="#8f9ca5"/>
+  <polygon points="292,206 590,282 590,628 292,620" fill="url(#display)"/>
+  <!-- Skærmglans og svagt låseikon på skærmen -->
+  <g clip-path="url(#screenClip)">
+    <polygon points="292,206 420,238 330,620 292,620" fill="#ffffff" opacity="0.18"/>
+    <g opacity="0.22" stroke="#ffffff" stroke-width="2" fill="none">
+      <path d="M330 300 h70 M330 320 h110 M330 340 h50"/>
+      <path d="M470 560 l20 -20 l20 20 l20 -20 l20 20"/>
+    </g>
+  </g>
+
+  <!-- Base (tastatur-del) -->
+  <polygon points="270,642 612,652 975,668 345,680" fill="url(#base)"/>
+  <polygon points="345,680 975,668 975,682 345,694" fill="#aebac2"/>
+  <polygon points="262,640 270,642 345,680 345,694 262,652" fill="#9aa7af"/>
+  <!-- Porte i siden -->
+  <g fill="#6f7d86">
+    <rect x="300" y="664" width="14" height="4" rx="2" transform="rotate(28 300 664)"/>
+    <rect x="322" y="675" width="8" height="3" rx="1.5" transform="rotate(28 322 675)"/>
+  </g>
+
+  <!-- Lysskær bag hængelåsen -->
+  <circle cx="560" cy="380" r="230" fill="url(#glow)"/>
+
+  <!-- Skyer, der vælter ud af skærmen -->
+  <g filter="url(#drop)">
+    <circle cx="330" cy="610" r="48" fill="url(#puff)"/>
+    <circle cx="395" cy="575" r="58" fill="url(#puff)"/>
+    <circle cx="470" cy="555" r="62" fill="url(#puff)"/>
+    <circle cx="545" cy="560" r="55" fill="url(#puff)"/>
+    <circle cx="610" cy="590" r="50" fill="url(#puff)"/>
+    <circle cx="370" cy="640" r="44" fill="url(#puff)"/>
+    <circle cx="450" cy="625" r="52" fill="url(#puff)"/>
+    <circle cx="530" cy="630" r="50" fill="url(#puff)"/>
+    <circle cx="600" cy="640" r="42" fill="url(#puff)"/>
+    <circle cx="665" cy="640" r="36" fill="url(#puff)"/>
+    <circle cx="300" cy="652" r="32" fill="url(#puff)"/>
+    <circle cx="720" cy="655" r="24" fill="url(#puff)"/>
+  </g>
+
+  <!-- Hængelås, der svæver op af skærmen -->
+  <g transform="rotate(12 600 330)" filter="url(#drop)">
+    <!-- Bøjle -->
+    <path d="M540 300 V230 a62 62 0 0 1 124 0 V300" fill="none" stroke="#8d9aa3" stroke-width="34" stroke-linecap="round" transform="translate(6 4)"/>
+    <path d="M540 300 V230 a62 62 0 0 1 124 0 V300" fill="none" stroke="url(#shackle)" stroke-width="30" stroke-linecap="round"/>
+    <path d="M532 290 V232 a70 70 0 0 1 40 -62" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+    <!-- Låsekrop med 3D-side -->
+    <rect x="505" y="290" width="200" height="170" rx="30" fill="url(#lockSide)" transform="translate(14 8)"/>
+    <rect x="505" y="290" width="200" height="170" rx="30" fill="url(#lockBody)"/>
+    <rect x="520" y="302" width="80" height="14" rx="7" fill="#ffffff" opacity="0.35"/>
+    <!-- Nøglehul -->
+    <circle cx="605" cy="362" r="22" fill="#5a2a10"/>
+    <path d="M594 370 L587 418 h36 L616 370 Z" fill="#5a2a10"/>
+    <circle cx="605" cy="362" r="22" fill="none" stroke="#ffb27a" stroke-width="3" opacity="0.6"/>
+  </g>
+
+  <!-- Små skyfnug og gnister -->
+  <g fill="#ffffff">
+    <circle cx="430" cy="430" r="9" opacity="0.9"/>
+    <circle cx="455" cy="470" r="6" opacity="0.85"/>
+    <circle cx="700" cy="420" r="8" opacity="0.9"/>
+    <circle cx="735" cy="470" r="5" opacity="0.8"/>
+    <circle cx="380" cy="500" r="7" opacity="0.85"/>
+    <circle cx="690" cy="525" r="10" opacity="0.9"/>
+    <circle cx="760" cy="300" r="6" opacity="0.8"/>
+    <circle cx="470" cy="220" r="5" opacity="0.75"/>
+  </g>
+  <g stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.9">
+    <path d="M780 230 v26 M767 243 h26"/>
+    <path d="M440 170 v18 M431 179 h18"/>
+  </g>
+</svg>
